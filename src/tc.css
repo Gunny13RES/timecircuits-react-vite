@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Jura&display=swap');
+@font-face {
+  font-family: SixteenSegments;
+  src: url(DS-DIGI.TTF);
+}
+
+.tc_full {
+  margin: auto;
+  width:50%;
+  height:50%;
+}
+
+.tc {
+  background-color: rgb(80,76,84);
+}
+
+.tc_sub {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+
+  padding: 0.5% 0;
+}
+
+.timeCircuitReadout {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10em;
+  font-family:SixteenSegments,monospace;
+  position:relative;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.month {
+  width: 20%;
+  margin: 0 0 0 2%;
+}
+
+.day {
+  width: 12%;
+  margin: 0 0 0 3%;
+}
+
+.year {
+  width: 24%;
+  margin: 0 0 0 4%;
+}
+
+.hour {
+  width: 12%;
+  margin: 0 0 0 5.5%;
+}
+
+.minute {
+  width: 12%;
+  margin: 0 0 0 4%;
+}
+
+.red {
+  color: rgb(255,100,26);
+  text-shadow: 0px 0px 12px #ff0000;
+}
+
+.green {
+  color: rgb(107,254,66);
+  text-shadow: 0px 0px 12px #00ff00;
+}
+
+.yellow {
+  color: rgb(240,202,44);
+  text-shadow: 0px 0px 12px #ff9900;
+}
+
+.dymo {
+  font-size: 2em;
+  color: rgb(172, 148, 148);
+  font-weight: 1000;
+  font-family: 'Jura', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.dymoRed {
+  text-align: center;
+  background-color: rgb(68,10,5);
+}
+
+.dymoBlack {
+  background-color: rgb(30,30,30);
+  left: 35%;
+  text-align: center;
+  position: relative;
+  padding: 0.1em 2em;
+  font-family: 'Jura', sans-serif;
+  font-weight: 1000;
+}
+
+.monthDymo {
+  margin: 0 10% 0.5em;
+}
+
+.dayDymo {
+  margin: 0 10% 0.5em;
+}
+
+.yearDymo {
+  margin: 0 27.5% 0.5em;
+}
+
+.hourDymo {
+  margin: 0 10% 0.5em;
+}
+
+.minDymo {
+  margin: 0 10% 0.5em;
+}
+
+.block {
+  display:block;
+}

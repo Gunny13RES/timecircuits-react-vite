@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css';
 import './tc.css';
 import TimeCircuitLayer from './timecircuitLayer.jsx';
+import ComicPanelBox from './comicPanelBox.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -46,13 +47,39 @@ function getLastTimeDeparted(){
 
 root.render(
   <React.StrictMode>
-    <h2>
-      Time Circuits
-    </h2>
-    <div className="tc_full">
-      <TimeCircuitLayer time = {getDestinationTime} colour="red" name="DESTINATION TIME"/>
-      <TimeCircuitLayer time = {getPresentTime} colour = "green" name="PRESENT TIME"/>
-      <TimeCircuitLayer time = {getLastTimeDeparted} colour = "yellow" name="LAST TIME DEPARTED"/>
+    <div className="thirdWidth vAlignTop">
+      <div className="comic-panels-flex-container" id="firstColumn">
+      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        </ComicPanelBox>
+      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        </ComicPanelBox>
+      </div>
     </div>
+    <div className="thirdWidth  vAlignTop">
+      <div className="comic-panels-flex-container" id="secondColumn">
+        <ComicPanelBox className="thirdHeight" id="topCentreBox">
+        </ComicPanelBox>
+        <ComicPanelBox>
+          <div className="tc_full">
+            <TimeCircuitLayer time = {getDestinationTime} colour="red" name="DESTINATION TIME"/>
+            <TimeCircuitLayer time = {getPresentTime} colour = "green" name="PRESENT TIME"/>
+            <TimeCircuitLayer time = {getLastTimeDeparted} colour = "yellow" name="LAST TIME DEPARTED"/>
+          </div>
+        </ComicPanelBox>
+        <ComicPanelBox className="thirdHeight" id="topCentreBox">
+        </ComicPanelBox>
+      </div>
+    </div>
+    <div className="thirdWidth vAlignTop">
+      <div className="comic-panels-flex-container" id="firstColumn">
+      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        </ComicPanelBox>
+      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        </ComicPanelBox>
+      </div>
+    </div>
+    
+    
+    
   </React.StrictMode>
 );

@@ -1,17 +1,20 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
+  line-height: 0.9;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+#root{
+  width:100%;
 }
 
 a {
@@ -23,12 +26,47 @@ a:hover {
   color: #535bf2;
 }
 
+.thirdHeight {
+  min-height: 33vh;
+}
+
+.halfHeight {
+  min-height: 50vh;
+}
+
+.thirdWidth {
+  width: 33.333%;
+  display:inline-block;
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: rgb(218, 214, 207);
+}
+
+.vAlignTop{
+  vertical-align: top;
+}
+
+.comic-panels-flex-container {
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: top;
+}
+
+.comic-panel {
+  display: block;
+  margin: 10px 5px;
+  padding: 0;
+  border: 3px solid black;
+  background-color: #0e2719;
 }
 
 h1 {

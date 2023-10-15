@@ -59,11 +59,11 @@ root.render(
       <div className="comic-panels-flex-container" id="secondColumn">
         <ComicPanelBox className="thirdHeight" id="topCentreBox">
         </ComicPanelBox>
-        <ComicPanelBox>
+        <ComicPanelBox className="thirdHeight">
           <div className="tc_full">
-            <TimeCircuitLayer time = {getDestinationTime} colour="red" name="DESTINATION TIME"/>
-            <TimeCircuitLayer time = {getPresentTime} colour = "green" name="PRESENT TIME"/>
-            <TimeCircuitLayer time = {getLastTimeDeparted} colour = "yellow" name="LAST TIME DEPARTED"/>
+              <TimeCircuitLayer time = {getDestinationTime} colour="red" name="DESTINATION TIME"/>
+              <TimeCircuitLayer time = {getPresentTime} colour = "green" name="PRESENT TIME"/>
+              <TimeCircuitLayer time = {getLastTimeDeparted} colour = "yellow" name="LAST TIME DEPARTED"/>
           </div>
         </ComicPanelBox>
         <ComicPanelBox className="thirdHeight" id="topCentreBox">

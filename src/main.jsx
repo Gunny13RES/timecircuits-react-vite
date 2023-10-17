@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css';
 import './tc.css';
@@ -6,6 +6,7 @@ import TimeCircuitLayer from './timecircuitLayer.jsx';
 import ComicPanelBox from './comicPanelBox.jsx';
 import CarPedal from './carPedal.jsx';
 import Speedometer from './speedometer';
+import FluxCapacitor from './fluxCapacitor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -47,8 +48,21 @@ function getLastTimeDeparted(){
   return lastTimeDeparted.format();
 }
 
-root.render(
-  <React.StrictMode>
+function App() {
+  const [frameTime, setFrameTime] = React.useState(performance.now());
+
+  useEffect(() => {
+    let frameId;
+    const frame = time => {
+      console.log("frame");
+      setFrameTime(time);
+      frameId = requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  return (<div>
     <div className="thirdWidth vAlignTop">
       <div className="comic-panels-flex-container" id="firstColumn">
       <ComicPanelBox className="halfHeight" id="topLeftBox">
@@ -62,7 +76,7 @@ root.render(
     <div className="thirdWidth  vAlignTop">
       <div className="comic-panels-flex-container" id="secondColumn">
         <ComicPanelBox className="thirdHeight" id="topCentreBox">
-          Profile view of car here
+          Profile view of car here with parallax background
         </ComicPanelBox>
         <ComicPanelBox className="thirdHeight">
           <div className="tc_full">
@@ -82,7 +96,14 @@ root.render(
             </div>
             <div id="ignition">
               <div id="keyhole"/>
-            </div>
+            </div>            
+          </div>
+          <div className="inline-block">
+            time circuits switch
+            <br/>
+            <br/>
+            <br/>
+            <br/>
           </div>
           <div className="inline-block float-right">
             <CarPedal id="accelerator"/>
@@ -96,12 +117,22 @@ root.render(
       <ComicPanelBox className="halfHeight" id="topLeftBox">
         </ComicPanelBox>
       <ComicPanelBox className="halfHeight" id="topLeftBox">
-        Flux capacitor and digital terminal screen (for telling you what your current next steps are/giving an introduction to the project at the beginning)
+        <div className="flex-container">
+          <div className="halfWidth fullHeight">
+          Digital terminal screen (for telling you what your current next steps are/giving an introduction to the project at the beginning)
+          </div>
+          <div className="halfWidth fullHeight">
+            <FluxCapacitor/>
+          </div>
+        </div>
         </ComicPanelBox>
       </div>
     </div>
-    
-    
-    
+  </div>);
+}
+
+root.render(
+  <React.StrictMode>
+    <App/>
   </React.StrictMode>
 );

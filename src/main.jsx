@@ -4,6 +4,8 @@ import './index.css';
 import './tc.css';
 import TimeCircuitLayer from './timecircuitLayer.jsx';
 import ComicPanelBox from './comicPanelBox.jsx';
+import CarPedal from './carPedal.jsx';
+import Speedometer from './speedometer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -21,10 +23,10 @@ class Time {
   format(){
     return ({
       month: months[this.month-1],
-      day: this.day.toString().padStart(2,'0').replace("1"," 1"),
-      year: this.year.toString().padStart(4,'0').replace("1","1"),
-      hour: this.hour.toString().padStart(2,'0').replace("1"," 1"),
-      minute: this.minute.toString().padStart(2,'0').replace("1"," 1")
+      day: this.day.toString().padStart(2,'0').replaceAll("1"," 1"),
+      year: this.year.toString().padStart(4,'0').replaceAll("1"," 1"),
+      hour: this.hour.toString().padStart(2,'0').replaceAll("1"," 1"),
+      minute: this.minute.toString().padStart(2,'0').replaceAll("1"," 1")
     });
   }
 }
@@ -50,14 +52,17 @@ root.render(
     <div className="thirdWidth vAlignTop">
       <div className="comic-panels-flex-container" id="firstColumn">
       <ComicPanelBox className="halfHeight" id="topLeftBox">
+        Plutonium etc here
         </ComicPanelBox>
       <ComicPanelBox className="halfHeight" id="topLeftBox">
+        Instruction notebook here?
         </ComicPanelBox>
       </div>
     </div>
     <div className="thirdWidth  vAlignTop">
       <div className="comic-panels-flex-container" id="secondColumn">
         <ComicPanelBox className="thirdHeight" id="topCentreBox">
+          Profile view of car here
         </ComicPanelBox>
         <ComicPanelBox className="thirdHeight">
           <div className="tc_full">
@@ -66,7 +71,23 @@ root.render(
               <TimeCircuitLayer time = {getLastTimeDeparted} colour = "yellow" name="LAST TIME DEPARTED"/>
           </div>
         </ComicPanelBox>
-        <ComicPanelBox className="thirdHeight" id="topCentreBox">
+        <ComicPanelBox className="thirdHeight almost-black" id="topCentreBox">
+          <div className="inline-block">
+            <Speedometer/>
+            <br/>
+            <div className="inline-block">
+              Movable key like the
+              <br/>
+              Papers Please key
+            </div>
+            <div id="ignition">
+              <div id="keyhole"/>
+            </div>
+          </div>
+          <div className="inline-block float-right">
+            <CarPedal id="accelerator"/>
+            <CarPedal id="brake"/>            
+          </div>
         </ComicPanelBox>
       </div>
     </div>
@@ -75,6 +96,7 @@ root.render(
       <ComicPanelBox className="halfHeight" id="topLeftBox">
         </ComicPanelBox>
       <ComicPanelBox className="halfHeight" id="topLeftBox">
+        Flux capacitor and digital terminal screen (for telling you what your current next steps are/giving an introduction to the project at the beginning)
         </ComicPanelBox>
       </div>
     </div>

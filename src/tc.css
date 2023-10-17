@@ -24,14 +24,15 @@
 }
 
 .timeCircuitReadout {
-  display: inline-block;
+  display: block;
   background-color: black;
-  color: white;
   text-align: center;
   font-weight: bold;
   font-size: 3.5em;
-  font-family:SixteenSegments,monospace;
-  position:relative;
+  font-family: SixteenSegments,monospace;
+  font-style: oblique 5deg;
+  position: relative;
+  white-space: pre;
 }
 
 .red-tc-clickable-region:hover {
@@ -51,7 +52,7 @@
 }
 
 .preDayGap{
-width: 3%;
+width: 2.75%;
 }
 
 .day {
@@ -59,7 +60,7 @@ width: 3%;
 }
 
 .preYearGap{
-  width: 4%;
+  width: 2.75%;
   }
   
 .year {
@@ -67,7 +68,9 @@ width: 3%;
 }
 
 .amPmGap{
-  width: 5.5%;
+  width: 6.5%;
+  padding: 0 0.1em;
+  box-sizing: border-box;
   }
 
 .hour {
@@ -106,7 +109,7 @@ width: 3%;
   font-size: 1em;
   padding: 0.1em 0.5em;
   text-align: center;
-  display: inline-block;
+  display: block;
   color: rgb(172, 148, 148);
   font-weight: bold;
   font-family: 'Jura', sans-serif;
@@ -123,7 +126,6 @@ width: 3%;
 .dymoBlack {
   background-color: rgb(30,30,30);
   padding: 0.1em 2em;
-  font-family: 'Jura', sans-serif;
   font-weight: 1000;
 }
 
@@ -141,15 +143,10 @@ width: 3%;
 
 .hourDymo {
   margin: 0 5% 0.5em;
-  padding: 0em 0.1em 0.2em 0;
 }
 
 .minDymo {
   margin: 0 10% 0.5em;
-}
-
-.block {
-  display:block;
 }
 
 .amLabel{
@@ -159,14 +156,14 @@ width: 3%;
 }
 
 .pmLabel{
-  margin: 2.8em 0.1em 0 0.1em;
+  margin: 0.85em 0.1em 0 0.1em;
   padding: 0 0 0.1em 0;
   font-size: 0.9em;
 }
 
 .amPmIndicator{
-  margin: -0.225em 0;
-  line-height: 0em;
+  margin: -0.4em 0;
+  padding: 0;
   text-align: left;
   text-align: center;
   font-weight: bold;

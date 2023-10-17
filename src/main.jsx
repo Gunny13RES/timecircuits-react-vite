@@ -225,7 +225,7 @@ function App() {
           Digital terminal screen (for telling you what your current next steps are/giving an introduction to the project at the beginning)
           </div>
           <div className="halfWidth fullHeight">
-            <FluxCapacitor/>
+          Doc's notebook explaining the fictional logic behind the car
           </div>
         </div>
         </ComicPanelBox>
@@ -235,7 +235,7 @@ function App() {
           Digital terminal screen (for telling you what your current next steps are/giving an introduction to the project at the beginning)
           </div>
           <div className="halfWidth fullHeight">
-          Doc's notebook explaining the fictional logic behind the car
+            <FluxCapacitor/>          
           </div>
         </div>
         </ComicPanelBox>

@@ -53,7 +53,7 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(218, 214, 207);
+  background-color: rgb(33, 31, 44);
   overflow: hidden
 }
 
@@ -77,7 +77,8 @@ body {
   display: block;
   margin: 10px 5px;
   padding: 0;
-  border: 3px solid black;
+  border: 3px solid rgba(0, 0, 0, 0.975);
+  border-radius: 0.125em;
   background-color: #0e2719;
 }
 

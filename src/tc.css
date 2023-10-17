@@ -33,7 +33,7 @@
   font-style: oblique 5deg;
   position: relative;
   white-space: pre;
-  border-radius: 0.03em;
+  border-radius: 0.05em;
   border: 0.01em inset rgba(120,120,120,0.5);
   box-sizing: content-box;
 }

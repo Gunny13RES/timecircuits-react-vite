@@ -6,7 +6,7 @@ class TimeCircuitLayer extends React.Component {
         super(props) 
             
         // Set initial state 
-        this.state = {time: props.time(),
+        this.state = {time: props.time,
                       colour: props.colour,
                       name: props.name} 
         }
@@ -25,7 +25,7 @@ class TimeCircuitLayer extends React.Component {
                             MONTH
                         </div>
                         <div className={"timeCircuitReadout " + this.state.colour}>
-                            {this.state.time.month}
+                            {this.state.time.format().month}
                         </div>
                     </div>
                     <div className="preDayGap"/>
@@ -34,7 +34,7 @@ class TimeCircuitLayer extends React.Component {
                             DAY
                         </div>
                         <div className={"timeCircuitReadout " + this.state.colour}>
-                            {this.state.time.day}
+                            {this.state.time.format().day}
                         </div>
                     </div>
                     <div className="preYearGap"/>
@@ -43,20 +43,20 @@ class TimeCircuitLayer extends React.Component {
                             YEAR
                         </div>
                         <div className={"timeCircuitReadout " + this.state.colour}>
-                            {this.state.time.year}
+                            {this.state.time.format().year}
                         </div>
                     </div>
                     <div className="amPmGap">
                         <div className="dymo dymoRed amLabel">
                             AM
                         </div>
-                        <div className={this.state.colour + " amPmIndicator"}>
+                        <div className={this.state.colour + " amPmIndicator " + (this.state.time.isAm() ? "" : "off")}>
                         ·
                         </div>
                         <div className="dymo dymoRed pmLabel">
                             PM
                         </div>
-                        <div className={this.state.colour + " amPmIndicator"}>
+                        <div className={this.state.colour + " amPmIndicator " + (this.state.time.isPm() ? "" : "off")}>
                         ·
                         </div>
                     </div>
@@ -65,7 +65,7 @@ class TimeCircuitLayer extends React.Component {
                             HOUR
                         </div>
                         <div className={"timeCircuitReadout " + this.state.colour}>
-                            {this.state.time.hour}
+                            {this.state.time.format().hour}
                         </div>
                     </div>
                     <div className={this.state.colour + " secondsIndicatorGap"}>
@@ -76,7 +76,7 @@ class TimeCircuitLayer extends React.Component {
                             MIN
                         </div>
                         <div className={"timeCircuitReadout " + this.state.colour}>
-                            {this.state.time.minute}
+                            {this.state.time.format().minute}
                         </div>
                     </div>
                 </div>

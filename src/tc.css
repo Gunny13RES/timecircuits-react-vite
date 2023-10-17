@@ -33,14 +33,22 @@
   font-style: oblique 5deg;
   position: relative;
   white-space: pre;
+  border-radius: 0.03em;
+  border: 0.01em inset rgba(120,120,120,0.5);
+  box-sizing: content-box;
 }
 
 .red-tc-clickable-region:hover {
   cursor: pointer;
 }
 
-.red-tc-clickable-region:hover .red{
+.red-tc-clickable-region:hover .red:not(.off) {
   color: rgb(255, 204, 204) !important;
+}
+
+.off {
+  color: rgb(26, 24, 24) !important;
+  text-shadow: none !important;
 }
 
 .preMonthGap{

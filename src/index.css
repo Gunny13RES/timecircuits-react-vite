@@ -248,8 +248,20 @@ button:focus-visible {
   height: 83%;
   margin: 0.2em auto 1em auto;
   box-sizing: border-box;
-  border: 1em rgb(24, 26, 29) outset;
+  border: 1em rgba(0, 0, 0, 0) outset;
   position:relative;
+}
+
+.flux-capacitor-inner.border {  
+  background-color: rgba(0, 174, 255, 0.1);
+  width:100%;
+  height:100%;
+  border: 1em rgb(24, 26, 29) outset;
+  border-radius: 3em;
+  box-sizing: content-box;
+  top:-1.2em;
+  left:-1em;
+  position:absolute;
 }
 
 .flux-capacitor-dymo {  
@@ -294,7 +306,7 @@ button:focus-visible {
 .capacitor-arm-right {
   transform-origin: 0 0;
   transform: rotate(135deg);
-  left: 95%;
+  left: 94%;
   top: 13%;
 }
 
@@ -302,5 +314,29 @@ button:focus-visible {
   transform-origin: 0% 0;
   transform: rotate(-90deg);
   bottom: 5%;
-  left: 47.5%;
+  left: 47%;
+}
+
+.flux-capacitor-round {
+  position:absolute;
+  width:1em;
+  height:1em;
+  background-color:rgb(102, 102, 102);
+  border: 1em outset grey;
+  border-radius:5em;
+  top: 0.5em;
+}
+
+.flux-capacitor-round.left {
+  left: -0.25em;
+}
+
+.flux-capacitor-round.right {
+  right: -0.25em;
+}
+
+.flux-capacitor-round.lower {
+  top: unset;
+  bottom: 0.25em;
+  left: 4.7em;
 }

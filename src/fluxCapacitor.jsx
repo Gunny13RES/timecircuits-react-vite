@@ -8,6 +8,9 @@ class FluxCapacitor extends React.Component {
     }
 
     render (){
+        let d = new Date().getTime()+"";
+        let fluxOffset = d.slice(-3)/325 + "em";
+        
         return (
             <div className="flux-capacitor-sizing">
                 <div className="flux-capacitor">
@@ -17,7 +20,10 @@ class FluxCapacitor extends React.Component {
                     <div className="flux-capacitor-dymo">
                         BEFORE OPENING
                     </div>
-                    <div className="flux-capacitor-inner">
+                    <div className="flux-capacitor-inner">                       
+                        <div className="capacitor-arm capacitor-arm-left capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
+                        <div className="capacitor-arm capacitor-arm-right capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
+                        <div className="capacitor-arm capacitor-arm-lower capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
                         <div className="flux-capacitor-dymo shield-eyes-label">
                             SHIELD EYES FROM LIGHT
                         </div>

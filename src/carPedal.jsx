@@ -1,4 +1,4 @@
-import './index.css';
+import './style/index.css';
 import React from 'react';
 
 class CarPedal extends React.Component {

@@ -1,4 +1,4 @@
-import './tc.css';
+import './style/tc.css';
 import React from 'react';
 
 class TimeCircuitLayer extends React.Component {

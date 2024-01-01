@@ -1,4 +1,5 @@
-import './index.css';
+import './style/index.css';
+import './style/flux-capacitor.css';
 import React from 'react';
 
 class FluxCapacitor extends React.Component {
@@ -10,6 +11,8 @@ class FluxCapacitor extends React.Component {
     render (){
         let d = new Date().getTime()+"";
         let fluxOffset = ((d.slice(-3)/999)*6.6) + "em";
+        
+        let capacitor_is_on = true;
 
         return (
             <div className="flux-capacitor-sizing">
@@ -24,9 +27,9 @@ class FluxCapacitor extends React.Component {
                         <div className="flux-capacitor-round left"></div>
                         <div className="flux-capacitor-round right"></div>
                         <div className="flux-capacitor-round lower"></div>
-                        <div className="capacitor-arm capacitor-arm-left capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
-                        <div className="capacitor-arm capacitor-arm-right capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
-                        <div className="capacitor-arm capacitor-arm-lower capacitor-on" style={{"backgroundPositionX":fluxOffset}}></div>
+                        <div className={"capacitor-arm capacitor-arm-left "+ (capacitor_is_on ? "capacitor-on" : "")} style={{"backgroundPositionX":capacitor_is_on ? fluxOffset : 0}}></div>
+                        <div className={"capacitor-arm capacitor-arm-right "+ (capacitor_is_on ? "capacitor-on" : "")} style={{"backgroundPositionX":capacitor_is_on ? fluxOffset : 0}}></div>
+                        <div className={"capacitor-arm capacitor-arm-lower "+ (capacitor_is_on ? "capacitor-on" : "")} style={{"backgroundPositionX":capacitor_is_on ? fluxOffset : 0}}></div>
                         <div className="flux-capacitor-inner border"></div>   
                         <div className="flux-capacitor-dymo shield-eyes-label">
                             SHIELD EYES FROM LIGHT

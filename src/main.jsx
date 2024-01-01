@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css';
-import './tc.css';
+import './style/index.css';
+import './style/tc.css';
 import TimeCircuitLayer from './timecircuitLayer.jsx';
 import ComicPanelBox from './comicPanelBox.jsx';
 import CarPedal from './carPedal.jsx';
@@ -167,18 +167,18 @@ function App() {
     return () => cancelAnimationFrame(frameId);
   }, []);
 
-  return (<div>
-    <div className="thirdWidth vAlignTop">
+  return (<main>
+    <div className="thirdWidth">
       <div className="comic-panels-flex-container" id="firstColumn">
-      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        <ComicPanelBox className="halfHeight" id="topLeftBox">
         Plutonium etc here
         </ComicPanelBox>
-      <ComicPanelBox className="halfHeight" id="topLeftBox">
+        <ComicPanelBox className="halfHeight" id="topLeftBox">
         Instruction notebook here?
         </ComicPanelBox>
       </div>
     </div>
-    <div className="thirdWidth  vAlignTop">
+    <div className="thirdWidth">
       <div className="comic-panels-flex-container" id="secondColumn">
         <ComicPanelBox className="thirdHeight" id="topCentreBox">
           Profile view of car here with parallax background
@@ -241,7 +241,7 @@ function App() {
         </ComicPanelBox>
       </div>
     </div>
-  </div>);
+  </main>);
 }
 
 root.render(

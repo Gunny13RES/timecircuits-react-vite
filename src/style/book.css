@@ -32,6 +32,7 @@
   border-top: 0.2em outset rgb(66, 39, 16);
   border-bottom: 0.4em outset rgb(66, 39, 16);
   position:relative;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
 }
 
 .bookleaf.left {

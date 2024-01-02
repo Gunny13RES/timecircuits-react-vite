@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Jura&display=swap');
 @font-face {
   font-family: SixteenSegments;
-  src: url(DS-DIGI.TTF);
+  src: url("../DS-DIGI.TTF");
 }
 
 .tc_full {
@@ -10,7 +10,6 @@
   padding: 0;
   background-color: rgb(60, 57, 63);
   width: 100%;
-
 }
 
 .tc {

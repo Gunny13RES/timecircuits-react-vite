@@ -5,8 +5,9 @@ import './style/tc.css';
 import TimeCircuitLayer from './timecircuitLayer.jsx';
 import ComicPanelBox from './comicPanelBox.jsx';
 import CarPedal from './carPedal.jsx';
-import Speedometer from './speedometer';
-import FluxCapacitor from './fluxCapacitor';
+import Speedometer from './speedometer.jsx';
+import FluxCapacitor from './fluxCapacitor.jsx';
+import Book from './book.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -151,7 +152,7 @@ function secondPasses(){
 let secondsLastCheckedAt = 0;
 
 function App() {
-  const [frameTime, setFrameTime] = React.useState(performance.now());
+  const [frameTime, setFrameTime] = React.useState(Date.now());
 
   useEffect(() => {
     let frameId;
@@ -174,7 +175,8 @@ function App() {
         Plutonium etc here
         </ComicPanelBox>
         <ComicPanelBox className="halfHeight" id="topLeftBox">
-        Instruction notebook here?
+        <Book>
+        </Book>
         </ComicPanelBox>
       </div>
     </div>

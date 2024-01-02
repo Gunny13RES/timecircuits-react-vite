@@ -1,0 +1,112 @@
+.spaceForBook {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  width: 35em;
+  height: 23.75em;
+  display:flex;
+  flex-direction: row;
+  position:relative;
+}
+
+.spaceForBook .quarter{
+  position: relative;
+  width:25%;
+}
+
+.spaceForBook .half{
+  position: relative;
+  width:50%;
+}
+
+.bookleaf {
+  color:rgb(250, 225, 86);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:bold;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 8em;  
+  background-color: rgb(83, 49, 20);
+  width:100%;
+  height:100%;
+  border-top: 0.2em outset rgb(66, 39, 16);
+  border-bottom: 0.4em outset rgb(66, 39, 16);
+  position:relative;
+}
+
+.bookleaf.left {
+  border-radius: 1em 0 0 1em;
+  border-left: 0.4em outset rgb(66, 39, 16);
+  border-right: 0.3em outset rgb(66, 39, 16);
+}
+
+.bookleaf.right {
+  border-radius: 0 1em 1em 0;
+  border-left: 0.3em outset rgb(66, 39, 16);
+  border-right: 0.4em outset rgb(66, 39, 16);
+}
+
+.half .bookleaf {
+  background-color: rgb(80, 52, 28);
+  border-radius: 0.2em 1em 1em 0.2em;
+  cursor:pointer;
+}
+
+.page {
+  margin-top: 0.4em;
+  position:relative;
+  width:96%;
+  height:94%;
+  border: 0.1em outset rgb(153, 153, 120);
+  line-height: 1em;
+  color:black;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  font-size: 0.7em;
+  box-sizing: border-box;
+}
+
+.page p {
+  padding: 1.5em 1.5em;  
+}
+
+.bookleaf.right .page  p {
+  padding-left: 1.6em;
+}
+
+.page li {
+  margin-left: 1em;
+}
+
+.bookleaf.left .page {
+  background:linear-gradient(-90deg, rgb(153,153,120) 0%, rgb(211,211,167) 15%);
+  float: right;
+  border-radius: 0 0.25em 0.25em 0;
+}
+
+.bookleaf.right .page {
+  background:linear-gradient(90deg, rgb(153,153,120) 0%, rgb(211,211,167) 15%);
+  float: left;
+  border-radius: 0.25em 0 0 0.25em;
+}
+
+.pageTurningButton {
+  background-color:transparent;
+  width: 6em;
+  height:6em;
+  position:absolute;
+  bottom: 0;
+  cursor:pointer;
+}
+
+.bookleaf.right .pageTurningButton {
+  right: 0;
+}
+
+.bookleaf.left .pageTurningButton:hover {
+  background: linear-gradient(225deg, rgb(201,201,157) 0%, rgb(190,190,149) 33%, rgb(211,211,167) 50%, rgb(153,153,120) 51%, rgb(201,201,157) 100%);
+}
+
+.bookleaf.right .pageTurningButton:hover {
+  background: linear-gradient(135deg, rgb(201,201,157) 0%, rgb(190,190,149) 33%, rgb(211,211,167) 50%, rgb(153,153,120) 51%, rgb(201,201,157) 100%);
+}
